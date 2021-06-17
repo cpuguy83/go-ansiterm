@@ -20,8 +20,6 @@ jobs:
         with:
           go-version: '^1.15.0' # Currently an error with go1.16 for rune convrsion. Update this once fixed.
       - run: go build ./...
-        env:
-          GO111MODULE: off
   test:
     runs-on: 'windows-2019'
     steps:
@@ -30,5 +28,3 @@ jobs:
         with:
           go-version: '^1.15.0' # Currently an error with go1.16 for rune convrsion. Update this once fixed.
       - run: go test ./...
-        env:
-          GO111MODULE: off
